@@ -1,0 +1,80 @@
+.form-group label   {
+    width: 120px;
+    float: left;
+    color: #666;
+}
+.form-group input,  .form-group select  {
+    width: 250px;
+    float: left;
+    margin-bottom: 10px;
+}
+.errors {
+    color: #c7254e;
+}
+.row    {
+    width: 100%;
+}
+
+.form-group .login  {
+    margin-left: 120px;
+}
+.form-group.remember label {
+    width: 270px;
+    float: right;
+    color: #666;
+}
+.form-group.remember input {
+    width: 30px;
+    float: right;
+}
+
+.profile_row    {
+    font-size: 16px;
+    padding-top: 10px;
+}
+.profile_row label  {
+    color: #666;
+    width: 130px;
+}
+
+.edit-button    {
+    float: right;
+    margin-top: 20px;
+    vertical-align: bottom;
+}
+
+.success_msg    {
+    color: #090;
+    font-weight: bold;
+}
+
+#timeLeft   {
+    color: #090;
+}
+
+.bar {
+    height: 18px;
+    background: green;
+    margin-top: 10px;
+}
+
+.profile_image{
+    max-width: 300px;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
