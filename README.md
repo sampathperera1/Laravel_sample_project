@@ -39,40 +39,59 @@ A mechanism which will allow a user to reset his password to a random generated 
 6) Administrator View
 A page which will allow pre-registered admin accounts to login and view a list of registered users and their relevant details. This area can use a minimalist layout that is different to the design. Admins must be able to activate/deactivate user accounts from here.
 
+About the system design and code
+================================
+
+System is fully OOP and few design patterns are used with MVC architecture. 
+I used Mysql database with 3 tables. (users, tokens & country) tokens table is used to store token needed to verify the account and password reset. It is related with users table with FK user_id.
+
+I have used jquery & bootstrap to render decent frontend. Jquery fileuploader used for asynchronous file upload. Only images are allowed, no max filesize or image resizing.
+
+All validation rules are implemented as project doc. The form used to create the user was reused in the edit profile. Admin section uses the same login, users with is_admin set to 1 can access the admin panel. Admin link will display on top NAV bar for admin users. I have included one user with admin rights in the database.sql
+UserName: SAM password: abc123
+
+I have used SMTP to send out emails. It should work with the given configuration. But you can easily change it on app/config/mail.php. I have send out emails without queuing as this is a test project.
+
+You can find my code mainly on app/controllers, app/models and app/views.
+I have stick to Laravel coding standards. Also I have used best practises to prevent security issues CSRF, SQL injection, XSS. Password are stored with Bcrypt, so they cannot decrypt and protect against rainbow table attacks. 
+
 Setup Instructions
 ==================
 
-# Requirements
- Web server (Apache) configured with the following requirements.
+Requirements
+ Web server (Apache) configured with the following
  Make sure allow .htaccess configurations. (AllowOverride All)
  Enable mod_rewrite 
  PHP 5.4.0 or newer
  MySql 5.5 or higher
  MCrypt PHP Extension
 
-# Setup
- Download the project files, extract it.
-  Option 1: Just copy laravel_sample_project/ folder into a webshared folder.
-  Option 2: Create a slim-link from weh shared folder to the laravel_sample_project/public 
-  option 3: Define a vertula host on apache and make the document roor slaravel_sample_project/public folder.
+Setup
+Download the zip file form below link:
+https://drive.google.com/file/d/0B8w5D0ZboWdzUzN0akN4OUlOYlE/view?usp=sharing
+Extract zip file.
+  Option 1: Just copy sampath_larave/ folder into a webshared folder.
+  Option 2: Create a slim-link from weh shared folder to the sampath_larave/public 
+  option 3: Define a vertula host on apache and make the document roor sampath_larave/public folder.
 
-Please create a database and import database.sql (DB schema with some dummy data)
+Database
+Please create a database and import /database.sql (DB schema with some dummy data)
 Edit the app/config/databases.php file and update the database settings.
-Admin username SAM, Password : abc123
 
+Folder Access
 Folders within app/storage require write access by the web server. (caching, session & logs)
 assets/img folder require write access by the web server. (profile image upload)
-
+Email
 Need to open port 587 to send out emails.
 You will receive emails from sampathperera@mailgun.org
+You can change mail setting easily on app/config/mail.php
 
 I have enabled the debug mode to find errors easily. 
-
-If you still get error message, You may run 
-	composer install
-	composer update
-	composer  dumpautoload
-to update the dependancies according to your environment.
+Project should work with the above settings. 
+If you still get errors please try:
+composer install
+composer update
+composer dumpautoload
 
 Feel free to contact me anytime if you need any assistance
 radsperera@gmail.com
