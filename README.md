@@ -1,7 +1,10 @@
 Laravel Sample Project
 ======================
 
-This is an example project done using Laravel 4.2 PHP framework. This will cover basics of the Laravel framwork. I hope this will be a great project to learn Laravle Framwork quickly. 
+This is an example project done using Laravel 4.2 PHP framework. This will cover basics of the framwork. 
+Laravel 4.2 is full-stack modern PHP framework, that used all new features introduced in recent PHP versions.
+Project is a user registration system with login, activate account by email, password recovery and a admin pannel. 
+I hope this will be a great project to learn Laravle Framwork quickly. 
 
 Project Scope
 =============
