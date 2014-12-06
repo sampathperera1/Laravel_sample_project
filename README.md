@@ -70,9 +70,7 @@ Requirements
  MCrypt PHP Extension
 
 Setup
-Download the zip file form below link:
-https://drive.google.com/file/d/0B8w5D0ZboWdzUzN0akN4OUlOYlE/view?usp=sharing
-Extract zip file.
+Download this project.
   Option 1: Just copy sampath_larave/ folder into a webshared folder.
   Option 2: Create a slim-link from weh shared folder to the sampath_larave/public 
   option 3: Define a vertula host on apache and make the document roor sampath_larave/public folder.
