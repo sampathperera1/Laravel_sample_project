@@ -70,7 +70,10 @@ Requirements
  MCrypt PHP Extension
 
 Setup
+-----
+
 Download this project.
+
   Option 1: Just copy sampath_larave/ folder into a webshared folder.
   Option 2: Create a slim-link from weh shared folder to the sampath_larave/public 
   option 3: Define a vertula host on apache and make the document roor sampath_larave/public folder.
@@ -80,19 +83,22 @@ Please create a database and import /database.sql (DB schema with some dummy dat
 Edit the app/config/databases.php file and update the database settings.
 
 Folder Access
+
 Folders within app/storage require write access by the web server. (caching, session & logs)
 assets/img folder require write access by the web server. (profile image upload)
+
 Email
+
 Need to open port 587 to send out emails.
 You will receive emails from sampathperera@mailgun.org
 You can change mail setting easily on app/config/mail.php
 
 I have enabled the debug mode to find errors easily. 
-Project should work with the above settings. 
-If you still get errors please try:
+
+run follwing composer command:
 composer install
-composer update
-composer dumpautoload
+
+Not project should be able to up and running on your web server.
 
 Feel free to contact me anytime if you need any assistance
 radsperera@gmail.com
